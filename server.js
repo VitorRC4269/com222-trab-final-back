@@ -2,12 +2,12 @@ const express = require("express");
 const cors = require("cors");
 const app = express();
 var corsOptions = {
-  origin: "http://localhost:8081",
 
 
-  /*origin:'*', 
+
+  origin:'*', 
    credentials:true,            
-   optionSuccessStatus:200,*/
+   optionSuccessStatus:200,
 };
 app.use(cors(corsOptions));
 // parse requests of content-type - application/json
@@ -41,17 +41,17 @@ require("./app/routes/publicacao.routes")(app);
 require("./app/routes/reserva.routes")(app);
 
 // set port, listen for requests
-const PORT = process.env.PORT || 8080;
+/*const PORT = process.env.PORT || 8080;
 
 
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}.`);
 });
+*/
 
-/*
 const host = '0.0.0.0';
 const port = process.env.PORT || 3000;
 
 app.listen(port, host, function() {
     console.log("Server started.......");
-})*/
+})
