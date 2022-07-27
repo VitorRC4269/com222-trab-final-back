@@ -24,7 +24,7 @@ const sequelize = new Sequelize(dbConfig.DB, dbConfig.USER, dbConfig.PASSWORD, {
 const db = {};
 db.Sequelize = Sequelize;
 db.sequelize = sequelize;
-db.tutorials = require("./tutorial.model.js")(sequelize, Sequelize);
+
 db.associado = require("./associado.model.js")(sequelize, Sequelize);
 db.emprestimo = require("./emprestimo.model.js")(sequelize, Sequelize);
 db.exemplar = require("./exemplar.model.js")(sequelize, Sequelize);
