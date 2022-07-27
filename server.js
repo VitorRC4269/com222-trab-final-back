@@ -29,10 +29,9 @@ db.sequelize.sync()
 
 
 app.get("/", (req, res) => {
-  res.json({ message: "Welcome to bezkoder application." });
+  res.json({ message: "Welcome to biblioteca application." });
 });
 
-require("./app/routes/tutorial.routes")(app);
 require("./app/routes/associado.routes")(app);
 require("./app/routes/emprestimo.routes")(app);
 require("./app/routes/exemplar.routes")(app);
